@@ -66,3 +66,5 @@ def like_post(request, post_id):
     return redirect('post-detail', pk=post.id)
 
 
+
+
