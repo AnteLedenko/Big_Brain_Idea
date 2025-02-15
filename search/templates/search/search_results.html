@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Search Results{% endblock %}
+{% block content %}
+<div class="container">
+    <h1 class="mb-4">Search Results for "{{ query }}"</h1>
+    <h3 class="mb-3">Matching Users</h3>
+    <div class="row g-3">
+        {% if user_results %}
+            {% for user in user_results %}
+                <div class="col-4 col-md-3 col-lg-2 mb-2">
+                    <div class="card text-center p-2 h-100">
+                        <img src="{{ user.profile.profile_picture.url }}" class="rounded-circle mx-auto mb-2" width="50" height="50">
+                        <h6 class="text-truncate"><a href="{% url 'profile' username=user.username %}" class="text-decoration-none">{{ user.username }}</a></h6>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No matching users found.</p>
+        {% endif %}
+    </div>
+    <hr class="my-5">
+    <h3 class="mb-3">Matching Posts</h3>
+    <div class="row g-4">
+        {% if post_results %}
+            {% for post in post_results %}
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow-lg">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="{% url 'post-detail' post.pk %}" class="text-decoration-none">{{ post.title }}</a></h4>
+                            <p>{{ post.content|truncatewords:40 }}</p>
+                            <small>By<a href="{% url 'profile' username=post.author.username %}" class="text-decoration-none">{{ post.author.username }}</a></small>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No matching posts found.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
