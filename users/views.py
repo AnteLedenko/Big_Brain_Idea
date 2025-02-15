@@ -5,21 +5,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import AuthenticationForm
 from .forms import UserRegisterForm, ProfileUpdateForm
 from blog.models import Post 
-from django.http import JsonResponse
-import os
 
-def health_check(request):
-    required_vars = [
-        'SECRET_KEY',
-        'DATABASE_URL',
-        'EMAIL_HOST_USER',
-        'EMAIL_HOST_PASSWORD',
-        'DJANGO_SUPERUSER_USERNAME',
-        'DJANGO_SUPERUSER_EMAIL',
-        'DJANGO_SUPERUSER_PASSWORD',
-    ]
-    env_status = {var: os.getenv(var, 'MISSING') for var in required_vars}
-    return JsonResponse(env_status)
 
 def register(request):
     if request.method == 'POST':
