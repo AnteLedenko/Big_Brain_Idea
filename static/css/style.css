@@ -22,20 +22,6 @@ body.dark-theme {
     align-items: center;
     overflow: hidden;
 }
-.img-div{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: block;
-    margin: 0;
-    overflow: hidden;
-}
-.post-image{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
 .about-image {
     width: 80%;
     height: auto;
