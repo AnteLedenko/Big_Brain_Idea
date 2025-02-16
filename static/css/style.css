@@ -26,9 +26,12 @@ body.dark-theme {
     border-radius: 50%;
     display: inline-block;
     margin: 0;
+    overflow: hidden;
 }
 .post-image{
     object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 .about-image {
     width: 80%;
