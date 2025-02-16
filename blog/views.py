@@ -39,7 +39,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
-    fields = ['title', 'image', 'content']
+    fields = ['title', 'content']
     template_name = 'blog/post_form.html'
     success_url = reverse_lazy('home')
 
