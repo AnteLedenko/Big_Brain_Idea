@@ -1,4 +1,4 @@
-<!--  here is a small form with csrf_token for deleting he post  -->
+<!--  here is a small form with csrf_token for deleting the post  -->
 
 {% extends "base.html" %}
 {% block title %}Delete Post{% endblock %}
@@ -7,7 +7,7 @@
 <p>{{ post.title }}</p>
 <form method="POST">
     {% csrf_token %}
-    <button type="submit" class="btn btn-warning">Delete</button>
+    <button type="submit" class="btn btn-warning mb-2">Delete</button>
 </form>
 <a href="{% url 'post-detail' post.pk %}" class="btn btn-warning">Cancel</a>
 {% endblock %}
