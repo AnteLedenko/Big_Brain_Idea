@@ -1,3 +1,9 @@
+# here we have functions for for creating, editing, deliting and liking comments.
+# add_comment allows logged in user to create comment for a specific post identified by post id.
+# edit_comment allows user to edit their own comments.
+# delete_comment allows user to delete their own comments after comfirmtion.
+# like_comment allows users to like or unlike comments.
+
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from blog.models import Post

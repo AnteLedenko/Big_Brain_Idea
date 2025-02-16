@@ -1,10 +1,12 @@
-from django.shortcuts import render
-from blog.models import Post
-from django.contrib.auth.models import User
-from .models import SearchQuery
-from django.contrib.auth.decorators import login_required
+# the search_results function handles search functionality for posts and users. 
+# retrieves search results from the Post and User models based on a query string 'q'.
+# logged in users  search queries are logged in the SearchQuery model.
 
-@login_required
+from django.shortcuts import render
+from django.contrib.auth.models import User
+from blog.models import Post
+from .models import SearchQuery
+
 def search_results(request):
     query = request.GET.get('q')
     post_results = []
@@ -13,7 +15,8 @@ def search_results(request):
     if query:
         post_results = Post.objects.filter(title__icontains=query)
         user_results = User.objects.filter(username__icontains=query)
-        SearchQuery.objects.create(user=request.user, query=query)
+        if request.user.is_authenticated:
+            SearchQuery.objects.create(user=request.user, query=query)
 
     return render(request, 'search/search_results.html', {
         'query': query,

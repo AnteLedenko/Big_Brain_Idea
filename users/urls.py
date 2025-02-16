@@ -1,3 +1,5 @@
+# defining url paths for users importing functions from views and password reset urls 
+
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from .views import register, user_login, user_logout, profile, update_profile

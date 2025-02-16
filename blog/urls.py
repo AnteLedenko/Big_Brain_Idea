@@ -1,3 +1,6 @@
+#  here im importing generic view classes and about and like post function and 
+# defining url paths for blog 
+
 from django.urls import path
 from .views import (
     about,

@@ -1,3 +1,10 @@
+# The Users app views include functionality for user authentication and profile management.
+# register handles user registration with the UserRegisterForm and logs the user in after successful registration.
+# user_login manages user login using Django's built-in AuthenticationForm.
+# user_logout logs out the authenticated user when a POST request is made.
+# profile displays the profile and posts of a specified user, identified by their username.
+# update_profile allows authenticated users to update their profile details using the ProfileUpdateForm.
+
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required

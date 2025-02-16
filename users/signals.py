@@ -1,3 +1,5 @@
+# Here were using django signals to automatically create and save a profile whenever a User is created or updated:
+
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib.auth import get_user_model

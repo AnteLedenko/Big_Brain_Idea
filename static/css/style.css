@@ -38,6 +38,7 @@ footer.dark-theme{
     background-color: #343a40;
     color: #e0e0e0;
 }
+/* Card styles */
 .card {
     border-radius: 8px;
     transition: background-color 0.3s, border 0.3s, color 0.3s;
@@ -48,6 +49,7 @@ footer.dark-theme{
     background-color:white;
     border-bottom: none;
 }
+/* Dark mode styles for cards */
 body.dark-theme .card{
     background-color: #1e1e1e;
     border: 2px solid #ffcc00;
@@ -66,18 +68,20 @@ body.dark-theme .card-footer {
 .card-footer {
     transition: background-color 0.3s, color 0.3s;
 }
+/* Navbar button styles */
 .navbar .btn {
     width: 120px;
     text-align: center;
     margin: 5px;
 }
+/* Navbar toggler button styles */
 .navbar-toggler {
     border: 1px solid black;
 }
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-
+/* Dark mode styles for navbar toggler */
 body.dark-theme .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffcc00' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 204, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }

@@ -1,3 +1,8 @@
+# defining Comment model with fields for post, user, content, date posted, and likes.
+# two methonds 
+# total_likes same like on post model returns the count of likes on a comment.
+# __str__ returns a string for username and post title
+
 from django.db import models
 from django.contrib.auth.models import User
 from blog.models import Post
@@ -12,7 +17,6 @@ class Comment(models.Model):
 
     def total_likes(self):
         return self.likes.count()
-
 
     def __str__(self):
         return f"{self.user.username} on {self.post.title}"

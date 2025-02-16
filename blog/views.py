@@ -1,12 +1,21 @@
+# Here im using djangos generic view classes to implement CRUD operations for Post model, also importing 
+# Comment model and CommentForm to display it in PostDetailView.
+# PostListView displays a paginated list of posts 9 per page in descending order of date.
+# PostDetailView shows post details, comments, and a comment form using 'blog/post_details.html'.
+# PostCreateView alows logged-in users to create posts with title and content
+# PostUpdateView author can edit title and content. 
+# PostDeleteView author can delete their posts after comfirmation.
+# like_post function lets the logged in user to add and remove likes.
+
 from django.shortcuts import get_object_or_404, redirect, render
-from django.http import JsonResponse
-from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
-from .models import Post
-from comments.models import Comment
 from comments.forms import CommentForm
+from comments.models import Comment
+from .models import Post
+
 
 def about(request):
     return render(request, 'blog/about.html')
