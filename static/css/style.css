@@ -20,13 +20,6 @@ body.dark-theme {
     display: block;
     margin: 0 auto;
 }
-.post-image{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-}
 .about-image {
     width: 80%;
     height: auto;
