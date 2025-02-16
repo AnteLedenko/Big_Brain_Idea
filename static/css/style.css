@@ -17,14 +17,16 @@ body.dark-theme {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    display: block;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 .img-div{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    display: inline-block;
+    display: block;
     margin: 0;
     overflow: hidden;
 }
@@ -32,6 +34,7 @@ body.dark-theme {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    border-radius: 50%;
 }
 .about-image {
     width: 80%;
