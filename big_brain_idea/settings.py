@@ -35,7 +35,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     os.environ.get('RENDER_HOSTNAME'),
-    'big-brain-idea.onrender.com'
+    'big-brain-idea-final.onrender.com'
 ]
 
 # Application definition
