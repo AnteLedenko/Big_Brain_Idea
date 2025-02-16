@@ -10,3 +10,7 @@ Big Brain Idea is a blog application where users can create user accounts, uploa
 2. Install dependencies: pip install -r requirements.txt
 3. Start the server: python manage.py runserver
 
+## Tech Stack
+- **Backend:** Django, Python
+- **Frontend:** HTML, CSS, JavaScript
+- **Database:** PostgreSQL

@@ -17,10 +17,12 @@ body.dark-theme {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+}
+.post-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 .about-image {
     width: 80%;
