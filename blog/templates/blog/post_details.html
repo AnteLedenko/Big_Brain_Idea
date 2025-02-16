@@ -9,9 +9,11 @@ users can like and comment on posts and the author can also edit or delete posts
         <div class="post-details mb-4">
             <h3 class="mb-3">{{ post.title }}</h3>
             <div class="d-flex alig-items-left mb-3">
-                <img src="{{ post.author.profile.profile_picture.url }} "class="post-image" alt="Profile Picture">
+                <div class="img-div">
+                    <img src="{{ post.author.profile.profile_picture.url }} "class="post-image" alt="Profile Picture">
+                </div>
                 <div>
-                    <p class="mb-0">
+                    <p class="mb-0 ml-3">
                         <strong><a href="{% url 'profile' username=post.author.username %}" class="text-decoration-none">{{ post.author.username }}</a></strong>
                     </p>
                     <small>on {{ post.date_posted }}</small>
